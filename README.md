@@ -1,15 +1,15 @@
 # Brilliant Test Task
 
-## Технології
+## Technologies
 - **Next.js** (App Router)
 - **React 18**
 - **TypeScript**
-- **Tailwind CSS** (з кастомними градієнтами, кольорами, border-radius)
-- **SCSS Modules** (з використанням @use для змінних)
-- **Framer Motion** (анімації)
-- **react-scroll-parallax** (паралакс-ефекти)
+- **Tailwind CSS** (with custom gradients, colors, border-radius)
+- **SCSS Modules** (with @use for variables)
+- **Framer Motion** (animations)
+- **react-scroll-parallax** (parallax effects)
 
-## Структура папок
+## Folder Structure
 ```
 src/
   app/                # Next.js entrypoints (page.tsx, layout.tsx, globals.css)
@@ -29,42 +29,47 @@ src/
     ui/
       GradientButton.tsx
       BackgroundLayer.tsx
-  data/               # Статичні дані для секцій, кнопок, проектів
-  hooks/              # Кастомні хуки
+      ObserverSection.tsx
+  data/               # Static data for sections, buttons, projects
+  hooks/              # Custom hooks
   styles/
-    _variables.scss   # SCSS-змінні для унікальних стилів
+    _variables.scss   # SCSS variables for unique styles
   types/
-    components.ts     # Типи пропсів компонентів
+    components.ts     # Component prop types
 ```
 
-## Основні best practices
-- **Кожен компонент** у власній папці з модулем стилів та index.ts
-- **SCSS-змінні** підключаються через `@use` (сучасний синтаксис)
-- **Tailwind config** містить кастомні градієнти, кольори, border-radius
-- **Типи** винесені у папку `types` для автодоповнення та масштабування
-- **Дані** для секцій, кнопок, проектів — у папці `data`
-- **UI-компоненти** (кнопки, layout) — у папці `ui`
+## Best Practices
+- **Each component** is in its own folder with a style module and index.ts
+- **SCSS variables** are imported via `@use` (modern syntax)
+- **Tailwind config** contains custom gradients, colors, border-radius
+- **Types** are in the `types` folder for autocompletion and scalability
+- **Data** for sections, buttons, projects is in the `data` folder
+- **UI components** (buttons, layout) are in the `ui` folder
 
-## Запуск проєкту
-1. Встановіть залежності:
+## How to Run
+1. Install dependencies:
    ```bash
    npm install
-   # або
+   # or
    yarn install
    ```
-2. Запустіть dev-сервер:
+2. Start the dev server:
    ```bash
    npm run dev
-   # або
+   # or
    yarn dev
    ```
-3. Відкрийте [http://localhost:3000](http://localhost:3000)
+3. Open [http://localhost:3000](http://localhost:3000)
 
-## Додатково
-- Для SCSS потрібен пакет `sass` (`npm install sass`)
-- Для анімацій використовується Framer Motion
-- Для паралаксу — react-scroll-parallax
+## Deployment
+The project is deployed on Vercel:
+👉 [https://test-task-qgsybkw4c-nm211077s-projects.vercel.app](https://test-task-qgsybkw4c-nm211077s-projects.vercel.app)
+
+## Additional Notes
+- You need the `sass` package for SCSS (`npm install sass`)
+- Animations use Framer Motion
+- Parallax effects use react-scroll-parallax
 
 ---
 
-**Проєкт організовано за сучасними best practices для масштабованих UI/landing page.**
+**The project is organized according to modern best practices for scalable UI/landing pages.**

@@ -10,11 +10,11 @@ const BackgroundLayer = ({activeSection}: { activeSection: string }) => {
 
     return (
         <div className="bg-wrapp fixed inset-0 -z-10 pointer-events-none bg-black">
-            <Parallax y={[-20, 20]}>
+            <Parallax translateY={[-20, 20]}>
                 <div className="planet absolute" style={config.planet}/>
             </Parallax>
 
-            <Parallax y={[-40, 40]}>
+            <Parallax translateY={[-40, 40]}>
                 <div className="red-spot absolute" style={config.redSpot}/>
                 <div className="blue-spot absolute" style={config.blueSpot}/>
             </Parallax>

@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Brilliant Test Task
 
-## Getting Started
+## Технології
+- **Next.js** (App Router)
+- **React 18**
+- **TypeScript**
+- **Tailwind CSS** (з кастомними градієнтами, кольорами, border-radius)
+- **SCSS Modules** (з використанням @use для змінних)
+- **Framer Motion** (анімації)
+- **react-scroll-parallax** (паралакс-ефекти)
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Структура папок
+```
+src/
+  app/                # Next.js entrypoints (page.tsx, layout.tsx, globals.css)
+  components/
+    HeroSection/
+      HeroSection.tsx
+      HeroSection.module.scss
+      index.ts
+    StaticButtonsSection/
+      StaticButtonsSection.tsx
+      StaticButtonsSection.module.scss
+      index.ts
+    IntegratedProjectsSection/
+      IntegratedProjectsSection.tsx
+      IntegratedProjectsSection.module.scss
+      index.ts
+    ui/
+      GradientButton.tsx
+      BackgroundLayer.tsx
+  data/               # Статичні дані для секцій, кнопок, проектів
+  hooks/              # Кастомні хуки
+  styles/
+    _variables.scss   # SCSS-змінні для унікальних стилів
+  types/
+    components.ts     # Типи пропсів компонентів
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Основні best practices
+- **Кожен компонент** у власній папці з модулем стилів та index.ts
+- **SCSS-змінні** підключаються через `@use` (сучасний синтаксис)
+- **Tailwind config** містить кастомні градієнти, кольори, border-radius
+- **Типи** винесені у папку `types` для автодоповнення та масштабування
+- **Дані** для секцій, кнопок, проектів — у папці `data`
+- **UI-компоненти** (кнопки, layout) — у папці `ui`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Запуск проєкту
+1. Встановіть залежності:
+   ```bash
+   npm install
+   # або
+   yarn install
+   ```
+2. Запустіть dev-сервер:
+   ```bash
+   npm run dev
+   # або
+   yarn dev
+   ```
+3. Відкрийте [http://localhost:3000](http://localhost:3000)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Додатково
+- Для SCSS потрібен пакет `sass` (`npm install sass`)
+- Для анімацій використовується Framer Motion
+- Для паралаксу — react-scroll-parallax
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Проєкт організовано за сучасними best practices для масштабованих UI/landing page.**

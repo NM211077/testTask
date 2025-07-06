@@ -1,0 +1,10 @@
+@use '../../styles/variables' as *;
+
+.projectLogo {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 250px;
+  height: 100px;
+  margin: 0 30px;
+} 

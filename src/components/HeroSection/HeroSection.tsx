@@ -1,13 +1,14 @@
 'use client';
-import React, { useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import GradientButton from "../ui/GradientButton";
 import StaticButtonsSection from "@/components/StaticButtonsSection";
 import styles from "./HeroSection.module.scss";
-import type { HeroSectionProps } from '@/types/components';
+import type {HeroSectionProps} from '@/types/components';
+
 const defaultGradient = 'linear-gradient(108.88deg, #B53EA4 -2.82%, #FC6F32 34.48%, #FF4A59 93.08%)';
 const newGradient = 'linear-gradient(106.2deg, #FFD6F9 -12.33%, #FFCBB4 50.28%, #FFBEC3 114.17%)';
 
-const HeroSection = ({ handleSectionChange, scrollDirection, activeSection }: HeroSectionProps) => {
+const HeroSection = ({handleSectionChange, scrollDirection, activeSection}: HeroSectionProps) => {
     const [gradient, setGradient] = useState(defaultGradient);
     const [showStaticButtonsSection, setShowStaticButtonsSection] = useState(false);
     const [showPulseButtons, setShowPulseButtons] = useState(false);

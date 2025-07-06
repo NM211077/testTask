@@ -1,25 +1,25 @@
 'use client';
 import {integratedProjects} from "@/data/integratedProjects";
 import Marquee from "react-fast-marquee";
-import { motion, useAnimation, useInView } from "framer-motion";
-import { useRef, useEffect } from "react";
+import {motion, useAnimation, useInView} from "framer-motion";
+import {useRef, useEffect} from "react";
 import styles from './IntegratedProjectsSection.module.scss';
 
-    export default function IntegratedProjectsSection() {
+export default function IntegratedProjectsSection() {
     const ref = useRef(null);
-    const inView = useInView(ref, { once: true, margin: "-100px" });
+    const inView = useInView(ref, {once: true, margin: "-100px"});
     const controls = useAnimation();
 
     useEffect(() => {
         if (inView) {
-            controls.start({ opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.4, 0, 0.2, 1] } });
+            controls.start({opacity: 1, y: 0, transition: {duration: 1.2, ease: [0.4, 0, 0.2, 1]}});
         }
     }, [inView, controls]);
 
     return (
         <motion.section
             ref={ref}
-            initial={{ opacity: 0, y: 40 }}
+            initial={{opacity: 0, y: 40}}
             animate={controls}
             className="py-20 text-white flex flex-col justify-center min-h-screen"
         >
@@ -38,7 +38,7 @@ import styles from './IntegratedProjectsSection.module.scss';
                         <div
                             key={name}
                             className={styles.projectLogo}
-                            style={{ backgroundImage: `url(${file})` }}
+                            style={{backgroundImage: `url(${file})`}}
                         />
                     ))}
                 </Marquee>

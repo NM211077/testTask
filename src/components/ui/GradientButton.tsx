@@ -5,7 +5,7 @@ import {GradientButtonProps} from "@/types/components";
 const GradientButton: React.FC<GradientButtonProps> = ({
                                                            children,
                                                            variant = "border",
-                                                           size = "md",
+                                                           size = "lg",
                                                            className = "",
                                                            ...props
                                                        }) => {

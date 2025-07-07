@@ -63,7 +63,7 @@ src/
 
 ## Deployment
 The project is deployed on Vercel:
-👉 [https://test-task-qgsybkw4c-nm211077s-projects.vercel.app](https://test-task-qgsybkw4c-nm211077s-projects.vercel.app)
+👉https://test-task-gilt-one.vercel.app
 
 ## Additional Notes
 - You need the `sass` package for SCSS (`npm install sass`)
